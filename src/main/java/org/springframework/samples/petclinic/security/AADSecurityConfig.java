@@ -17,6 +17,10 @@ public class AADSecurityConfig extends AADResourceServerWebSecurityConfigurerAda
     protected void configure(HttpSecurity http) throws Exception {
         super.configure(http);
         http.authorizeRequests().anyRequest().authenticated();
+        for(int i=0;i<10;i++)
+        {
+            System.out.println(" ------------------------------------->>>> FINISHED Configuring AADSecurityConfig !!!!!");
+        }
     }
 
 }
