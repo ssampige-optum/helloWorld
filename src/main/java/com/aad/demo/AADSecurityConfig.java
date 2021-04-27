@@ -1,4 +1,4 @@
-package org.springframework.samples.petclinic.security;
+package com.aad.demo;
 
 import com.azure.spring.aad.webapi.AADResourceServerWebSecurityConfigurerAdapter;
 
