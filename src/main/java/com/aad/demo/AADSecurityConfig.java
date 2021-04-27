@@ -7,7 +7,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 
 @EnableWebSecurity
-//@EnableGlobalMethodSecurity(prePostEnabled = true)
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class AADSecurityConfig extends AADResourceServerWebSecurityConfigurerAdapter
 {
     /**
@@ -17,7 +17,7 @@ public class AADSecurityConfig extends AADResourceServerWebSecurityConfigurerAda
     protected void configure(HttpSecurity http) throws Exception {
         super.configure(http);
         http.authorizeRequests().anyRequest().authenticated();
-        String version = "V1";
+        String version = "V2";
         for(int i=0;i<25;i++)
         {
             System.out.println(version+" "+i+" ------------------------------------->>>> FINISHED Configuring AADSecurityConfig !!!!!");
